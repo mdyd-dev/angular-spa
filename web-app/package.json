@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href / --deploy-url https://uploads.staging.oregon.platform-os.com/instances/4290/assets/web-app/",
+    "copyIndex": "cp ../app/assets/web-app/app.html.liquid ../app/views/layouts/",
+    "postbuild": "npm run copyIndex",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
