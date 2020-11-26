@@ -4,9 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "cssAssetsPath": "cp src/styles/environments/prod/asset-path.scss src/styles/environments/",
+    "cssAssetsPathReset": "cp src/styles/environments/local/asset-path.scss src/styles/environments/",
     "build": "ng build --prod --base-href / --deploy-url https://uploads.staging.oregon.platform-os.com/instances/4290/assets/web-app/",
     "copyIndex": "cp ../app/assets/web-app/app.html.liquid ../app/views/layouts/",
     "postbuild": "npm run copyIndex",
+    "prebuild": "npm run cssAssetsPath",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
